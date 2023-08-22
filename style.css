@@ -1,0 +1,35 @@
+span{
+    background-color: plum;
+    border: 5px solid green;
+}
+#padding1{padding: 10px;}
+#padding2{padding: 5px 20px;}
+#padding3{padding: 5px 10px 35px;}
+#padding4{padding: 10px 5px 40px 20px;}
+
+#different{
+    margin-top: 100px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.button{
+    padding: 15px 40px;
+    border: 2px solid darkcyan;
+    background-color: darkcyan;
+    font-size: large;
+    color: white;
+}
+
+.button:hover{
+    border: 2px solid darkcyan;
+    background-color: #9fd3c7;
+    color: darkcyan;
+
+}
+
+.exercises{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+}
