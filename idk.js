@@ -20,10 +20,13 @@ var reverseNumber = function(number){
 
 var button1 = document.getElementById('buttonEx1');
 var inputElemEx1 = document.getElementById('inputElementEx1');
+var resultElemEx1 =document.getElementById('resultEx1');
 
 button1.addEventListener("click",function(){
     var inputValue = inputElemEx1.value;
-    console.log(reverseNumber(inputValue));
+    var reversedValue = reverseNumber(inputValue);
+
+    resultElemEx1.textContent="Rezultat:" + reversedValue;
 });
 
 
