@@ -38,3 +38,68 @@ next.onclick = function(){
 prev.onclick = function(){
     img.setAttribute('src',images[decrementIndex(currentIndex)]);
 }
+
+//Creating To Do List
+var toggleCheck = function(){
+    // Create a variable to refer the to-do list, that is, the parent node of the checkbox
+    let parent = this.parentNode;
+
+    // Use the classList property to toggle the class checked, for example, varName.classList.toggle('checked')
+    parent.classList.toggle('checked');
+}
+
+var deleteTodo = function(){
+    // Create a variable to refer the to-do list, that is, the parent node of the delete button
+
+    let todoLi = this.parentNode;
+
+    // Remove the list item using the .remove() function, for example, varName.remove()
+    todoLi.remove();
+}
+
+var addTodo = function(todo){
+    let li = document.createElement('li');
+
+    let label = document.createElement('label');
+    label.innerHTML = todo;
+
+    let checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.onclick = toggleCheck;
+
+
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = "Delete";
+    deleteButton.className = "delete";
+    deleteButton.onclick = deleteTodo;
+    
+     // Nest todo elements in list item
+    li.appendChild(label);
+    li.appendChild(checkbox);
+    li.appendChild(deleteButton);
+
+    let todoList = document.getElementById('todoList');
+    // Append todo to todolist
+    todoList.appendChild(li);
+}
+
+
+
+document.getElementById('add').onclick = function() { 
+    //think about that tree structure when u learned the concepts of html elements
+
+    // Store the button's parent element (.addTodo <div>) in a variable
+    var parent = this.parentNode;
+    // Store the input, which is the first child element of the .addTodo <div>
+    var addTextInput = parent.children[0];
+
+    if(addTextInput === ""){
+        return;
+    }else{
+        //Add to do
+        addTodo(addTextInput.value);
+        //reset text input
+        addTextInput.value = "";
+    }
+
+}
