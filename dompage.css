@@ -23,6 +23,7 @@ header h2 {
 nav{
 
     background: #9DC08B;
+    text-decoration-style: solid;
   }
   nav ul{
     list-style-type: none;
@@ -37,6 +38,7 @@ nav{
     float:left;
     background: #9DC08B;
     position: sticky;
+    text-decoration-style: solid;
   }
   nav ul li a{
     text-decoration: none;
@@ -45,6 +47,7 @@ nav{
     padding: 20px;
     transition: all 0.5s ease-in-out;
     opacity: 1;
+    text-decoration-style: solid;
   }
   nav ul li a:hover{
     text-decoration: none;
