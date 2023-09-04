@@ -84,16 +84,27 @@ footer{
   padding: 20px;
 }
 
-.separator{
+.separator-1{
   height: 50px;
   width: 100%;
   float: left;
+  background-image: linear-gradient(#f1f1f1, #bcd6b2);
+}
+.separator-2{
+  height: 50px;
+  width: 100%;
+  float: left;
+  background-image: linear-gradient(#bcd6b2, #f1f1f1);
 }
 
 .article-2{
   width: 100%;
   text-align: center;
   background-color: #bcd6b2;
+}
+
+.article-3 > h4{
+  text-align: center;
 }
 
 
@@ -103,6 +114,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .imageCarousel > img {
@@ -183,7 +195,8 @@ footer{
   border: 3px solid rgba(57,129,169,1);
   border-radius: 10px;
   width: 50%;
-  
+  display: block;
+  margin: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
